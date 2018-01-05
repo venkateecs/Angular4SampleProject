@@ -1,0 +1,13 @@
+<p>
+  employee-view works! {{testData}}
+</p>
+
+<ul>
+
+  <li *ngFor="let emp of empData">
+      <button type="button"(click)="sendData(emp)" class="btn btn-success">{{emp.name}}</button>      
+  </li>
+
+</ul> 
+
+<app-overviewchild [overview]="display"></app-overviewchild>

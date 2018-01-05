@@ -1,0 +1,33 @@
+
+<table class="centered highlight striped">
+  <thead>
+    <tr>
+        <th></th>
+        <th>Impressions</th>
+        <th>Clicks(%)</th>
+        <th>View Throughs(%)</th>
+        <th>Visits(%)</th>
+        <th>Interactions(%)</th>
+        <th>Engagements</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let overview of overview">
+	
+      <td *ngIf="overview.MainId">
+	    <span style="font-weight: bold;margin-left:-50px;">
+		  {{overview.productname}}
+		</span>
+	  
+	  </td>
+	  <td *ngIf="!overview.MainId">{{overview.productname}}</td>
+      <td>{{overview.impressions}}</td>
+      <td>{{overview.clicks}}</td>
+      <td>{{overview.viewThroughs}}</td>
+      <td>{{overview.visits}}</td>
+      <td>{{overview.Interactions}}</td>
+      <td>{{overview.Engagements}} %</td>
+    </tr>
+  </tbody>
+</table>
